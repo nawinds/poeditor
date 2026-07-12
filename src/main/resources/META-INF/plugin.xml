@@ -1,0 +1,77 @@
+<idea-plugin url="https://github.com/nawinds/poeditor">
+<id>ru.aksenov.poeditor</id>
+<name>PO Editor</name>
+<vendor email="support@nawinds.dev" url="https://nawinds.dev">Nikita Aksenov</vendor>
+
+<description><![CDATA[
+    <p>
+        A focused table editor for GNU gettext <code>.po</code> translations and
+        <code>.pot</code> templates, built directly into JetBrains IDEs.
+    </p>
+    <ul>
+        <li>Edit identifiers, source text, and translations side by side.</li>
+        <li>Create PO translations and POT templates from the <b>New</b> menu.</li>
+        <li>Update translation catalogs from standard gettext/Babel templates.</li>
+        <li>Scan source code and Jinja2 templates for translation calls such as
+            <code>t("key")</code> and <code>_('key')</code>.</li>
+        <li>Validate PO syntax and compile catalogs to MO with GNU gettext.</li>
+        <li>Highlight untranslated, fuzzy, completed, and obsolete entries.</li>
+    </ul>
+    <p>
+        Supports both standard gettext entries using <code>msgid</code> and
+        context-based catalogs using <code>msgctxt</code>.
+    </p>
+  ]]></description>
+
+<change-notes><![CDATA[
+    <h3>0.1.0</h3>
+    <ul>
+        <li>Initial public release.</li>
+        <li>PO/POT table editor with validation and MO compilation.</li>
+        <li>Source scanning for Kotlin, Java, JavaScript, TypeScript, Python, PHP,
+            Jinja2, Vue, Svelte, and other common source formats.</li>
+        <li>Standard Babel/gettext POT synchronization.</li>
+    </ul>
+  ]]></change-notes>
+
+<depends>com.intellij.modules.platform</depends>
+
+<extensions defaultExtensionNs="com.intellij">
+    <fileType
+            name="PO File"
+            implementationClass="ru.aksenov.poeditor.PoFileType"
+            fieldName="INSTANCE"
+            language="PO"
+            extensions="po;pot"/>
+
+    <fileType
+            name="MO File"
+            implementationClass="ru.aksenov.poeditor.MoFileType"
+            fieldName="INSTANCE"
+            extensions="mo"/>
+
+    <fileEditorProvider
+            implementation="ru.aksenov.poeditor.editor.PoFileEditorProvider"/>
+
+    <notificationGroup
+            id="PO Editor"
+            displayType="BALLOON"/>
+</extensions>
+
+<actions>
+    <action
+            id="ru.aksenov.poeditor.CreatePoFileAction"
+            class="ru.aksenov.poeditor.actions.CreatePoFileAction"
+            text="PO Translation File"
+            description="Create PO translation file">
+        <add-to-group group-id="NewGroup" anchor="last"/>
+    </action>
+    <action
+            id="ru.aksenov.poeditor.CreatePotFileAction"
+            class="ru.aksenov.poeditor.actions.CreatePotFileAction"
+            text="POT Translation Template"
+            description="Create POT translation template">
+        <add-to-group group-id="NewGroup" anchor="last"/>
+    </action>
+</actions>
+</idea-plugin>

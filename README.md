@@ -1,7 +1,7 @@
 <div align="center">
   <img src="docs/images/po-editor-logo.svg" width="112" height="112" alt="PO Editor logo">
 
-  # PO Editor
+  # PO Editor 
 
   **A JetBrains IDE plugin for editing gettext `.po` translations and `.pot` templates in a table.**
 
@@ -9,6 +9,7 @@
   [![License: MIT](https://img.shields.io/badge/license-MIT-6B57FF.svg)](LICENSE)
   [![Kotlin](https://img.shields.io/badge/Kotlin-2.3.20-7F52FF.svg?logo=kotlin&logoColor=white)](https://kotlinlang.org/)
   [![IntelliJ Platform](https://img.shields.io/badge/IntelliJ_Platform-2026.1%2B-3C99CC.svg?logo=intellijidea&logoColor=white)](https://plugins.jetbrains.com/docs/intellij/)
+  <iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/32877"></iframe>
 </div>
 
 ## What is PO Editor?
@@ -17,10 +18,10 @@
 
 Instead of editing `.po` and `.pot` files as plain text, you can work with a simple table:
 
-| Identifier | Source text | Translation |
-| --- | --- | --- |
-| `button.save` | `Save` | `Сохранить` |
-| `page.title` | `Home page` | `Главная страница` |
+| Identifier    | Source text | Translation        |
+|---------------|-------------|--------------------|
+| `button.save` | `Save`      | `Сохранить`        |
+| `page.title`  | `Home page` | `Главная страница` |
 
 The plugin is useful for projects that use **gettext**, **Babel**, **Flask-Babel**, **Jinja2**, or any other localization workflow based on `.po`, `.pot`, and `.mo` files.
 
@@ -41,11 +42,11 @@ The plugin is useful for projects that use **gettext**, **Babel**, **Flask-Babel
 
 ## Supported file types
 
-| File type | Purpose | Plugin support |
-| --- | --- | --- |
-| `.pot` | Translation template | Table editor, source scan, template update |
-| `.po` | Translation catalog | Table editor, template sync, syntax check, `.mo` compilation |
-| `.mo` | Compiled binary catalog | Custom file icon |
+| File type | Purpose                 | Plugin support                                               |
+|-----------|-------------------------|--------------------------------------------------------------|
+| `.pot`    | Translation template    | Table editor, source scan, template update                   |
+| `.po`     | Translation catalog     | Table editor, template sync, syntax check, `.mo` compilation |
+| `.mo`     | Compiled binary catalog | Custom file icon                                             |
 
 ## Recommended gettext format
 
@@ -69,7 +70,7 @@ This keeps translation keys stable even when the source text changes.
 
 ### Option 1: JetBrains Marketplace
 
-After the plugin is published on JetBrains Marketplace:
+<iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/32877"></iframe>
 
 1. Open your JetBrains IDE.
 2. Go to **Settings / Preferences → Plugins → Marketplace**.
@@ -202,11 +203,11 @@ Useful commands:
 
 What these commands do:
 
-| Command | Purpose |
-| --- | --- |
-| `./gradlew test` | Run tests |
-| `./gradlew runIde` | Start a sandbox IDE with the plugin installed |
-| `./gradlew buildPlugin` | Build the installable plugin ZIP |
+| Command                  | Purpose                                        |
+|--------------------------|------------------------------------------------|
+| `./gradlew test`         | Run tests                                      |
+| `./gradlew runIde`       | Start a sandbox IDE with the plugin installed  |
+| `./gradlew buildPlugin`  | Build the installable plugin ZIP               |
 | `./gradlew verifyPlugin` | Check plugin compatibility with JetBrains IDEs |
 
 Project structure:

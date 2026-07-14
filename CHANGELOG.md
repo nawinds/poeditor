@@ -7,6 +7,12 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-07-14
+
+### Added
+
+- Support for builds since 243
+
 ## [0.1.0] - 2026-07-12
 
 ### Added
@@ -21,5 +27,6 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 - Automated GitHub build and JetBrains Marketplace release workflows.
 
 [Unreleased]: https://github.com/nawinds/poeditor/compare/v0.1.0...HEAD
+[1.0.0]: https://github.com/nawinds/poeditor/releases/tag/v1.0.0
 [0.1.0]: https://github.com/nawinds/poeditor/releases/tag/v0.1.0
 

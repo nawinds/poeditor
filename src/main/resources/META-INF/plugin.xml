@@ -24,13 +24,9 @@
   ]]></description>
 
 <change-notes><![CDATA[
-    <h3>0.1.0</h3>
+    <h3>1.0.0</h3>
     <ul>
-        <li>Initial public release.</li>
-        <li>PO/POT table editor with validation and MO compilation.</li>
-        <li>Source scanning for Kotlin, Java, JavaScript, TypeScript, Python, PHP,
-            Jinja2, Vue, Svelte, and other common source formats.</li>
-        <li>Standard Babel/gettext POT synchronization.</li>
+        <li>Support for builds since 243</li>
     </ul>
   ]]></change-notes>
 
